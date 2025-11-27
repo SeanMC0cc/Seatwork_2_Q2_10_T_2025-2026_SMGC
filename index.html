@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!--Meta-->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta description="Grade calculator using PyScript">
+
+        <!--bootstrap-->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+
+        <!--Css-->
+        <link rel="stylesheet" href="style.css">
+
+        <!--PyScript-->    
+        <link rel="stylesheet" href="https://pyscript.net/releases/2025.7.3/core.css" />
+        <script type="module" src="https://pyscript.net/releases/2025.7.3/core.js"></script>
+
+        <!--ICON-->
+        <link rel="icon" type="image/png" href="Image/QM.png">
+
+        <!--Title-->
+        <title>Grade calculator</title>
+    </head>
+    <body>
+        <header>
+            <!--Navbar-->
+            <nav class="navbar navbar-expand-sm">
+                <div class="container-fluid">
+                        <img src="Image/QMCL.png" alt="Avatar Logo"class="rounded-pill" width="70"> 
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Homepage</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">Grade calculator</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://seanmc0cc.github.io/Skills_test_Q2_10_T_2025-2026_SMGC">Club</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <div class="container">
+                <div class="card">
+                    <h2>Student calculator</h2>
+                    <form>
+                        <!--name-->
+                        <div class="row">
+                            <div class="col-md-6">
+                                <b><label for="fname">First Name:</label></b>
+                                <input type="text" name="fname" id="input_name1">
+                            </div>
+                            <div class="col-md-6">
+                                <b><label for="lname">Last Name:</label></b>
+                                <input type="text" name="lname" id="input_name2">
+                            </div>
+                        </div>
+                        <!--grades-->
+                        <div class="row mb-3">
+                            <h5>Enter Grades:</h5>
+                            <div class="col-md-4">
+                                <label for="math">Math:</label>
+                                <input type="number" name="math" min="0" max="100" id="input_grade1">
+                            </div>
+                            <div class="col-md-4">
+                                <label for="sci">Science:</label>
+                                <input type="number" name="science" min="0" max="100" id="input_grade2">
+                            </div>
+                            <div class="col-md-4">
+                                <label for="english">English:</label>
+                                <input type="number" name="english" min="0" max="100" id="input_grade3">
+                            </div>
+                            <div class="col-md-4">
+                                <label for="ICT">ICT:</label>
+                                <input type="number" name="ICT" min="0" max="100" id="input_grade4">
+                            </div>
+                            <div class="col-md-4">
+                                <label for="P.E">P.E:</label>
+                                <input type="number" name="P.E" min="0" max="100" id="input_grade5">
+                            </div>
+                            <div class="col-md-4">
+                                <label for="TLE">TLE:</label>
+                                <input type="number" name="TLE" min="0" max="100" id="input_grade6">
+                            </div>
+                        </div>
+                    </form>
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-primary" py-click="calculate_grade">Calculate</button>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="card">
+                    <div id="output"></div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <p>© 2025-2026 Grade Calculator. SMGC.</p>
+        </footer>
+        <py-script src="main.py"></py-script>
+    </body>
+</html>
